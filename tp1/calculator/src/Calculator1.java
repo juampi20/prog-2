@@ -11,60 +11,54 @@ public class Calculator1 {
         double firstNumber = scanner.nextDouble();
         double secondNumber = scanner.nextDouble();
 
-        do {
+        System.out.println("\nOperator? (+ - * /)");
+        operator = scanner.next();
 
-            System.out.println("\nOperator? (+ - * /)");
-            operator = scanner.next();
-
-            switch (operator) {
-
-            case "+":
-                double sum = sum(firstNumber, secondNumber);
-                System.out.println("\nThe result of sum is: " + sum);
-                run = false;
-                break;
-
-            case "-":
-                double subtract = subtract(firstNumber, secondNumber);
-                System.out.println("\nThe result of subtract is: " + subtract);
-                run = false;
-                break;
-
-            case "*":
-                double multiplication = multiplication(firstNumber, secondNumber);
-                System.out.println("\nThe result of multiplication is: " + multiplication);
-                run = false;
-                break;
-
-            case "/":
-                double division = division(firstNumber, secondNumber);
-                System.out.println("\nThe result of division is: " + division);
-                run = false;
-                break;
-
-            default:
-                System.out.println("Invalid option: " + operator);
-                break;
-            }
-
-        } while (run);
+        switch (operator) {
+        case "+":
+            addition(firstNumber, secondNumber);
+            break;
+        case "-":
+            subtraction(firstNumber, secondNumber);
+            break;
+        case "*":
+            multiplication(firstNumber, secondNumber);
+            break;
+        case "/":
+            division(firstNumber, secondNumber);
+            break;
+        default:
+            System.out.println("Invalid option: " + operator);
+        }
 
     }
 
-    private static Double sum(Double firstNumber, Double secondNumber) {
-        return firstNumber + secondNumber;
+    private static double addition(Double firstNumber, Double secondNumber) {
+        System.out.println("\nAddition");
+        double ret = firstNumber + secondNumber;
+        System.out.println("The result of the addition is: " + ret);
+        return ret;
     }
 
-    private static Double subtract(Double firstNumber, Double secondNumber) {
-        return firstNumber - secondNumber;
+    private static double subtraction(Double firstNumber, Double secondNumber) {
+        System.out.println("\nSubtraction");
+        double ret = firstNumber - secondNumber;
+        System.out.println("The result of the subtraction is: " + ret);
+        return ret;
     }
 
-    private static Double multiplication(Double firstNumber, Double secondNumber) {
-        return firstNumber * secondNumber;
+    private static double multiplication(Double firstNumber, Double secondNumber) {
+        System.out.println("\nMultiplication");
+        double ret = firstNumber * secondNumber;
+        System.out.println("The result of the multiplication is: " + ret);
+        return ret;
     }
 
-    private static Double division(Double firstNumber, Double secondNumber) {
-        return firstNumber / secondNumber;
+    private static double division(double firstNumber, double secondNumber) {
+        System.out.println("\nDivision");
+        double ret = firstNumber / secondNumber;
+        System.out.println("The result of division is: " + ret);
+        return ret;
     }
 
 }
