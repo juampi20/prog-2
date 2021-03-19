@@ -14,13 +14,13 @@ public class Calculator3 {
 
             switch (operator) {
                 case "+":
-                    double sum = addition();
-                    System.out.println("\nThe result of sum is: " + sum);
+                    double addition = addition();
+                    System.out.println("\nThe result of sum is: " + addition);
                     run = false;
                     break;
                 case "-":
-                    double subtract = subtraction();
-                    System.out.println("\nThe result of subtract is: " + subtract);
+                    double subtraction = subtraction();
+                    System.out.println("\nThe result of subtract is: " + subtraction);
                     run = false;
                     break;
 
