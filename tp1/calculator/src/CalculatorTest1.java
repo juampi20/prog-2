@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
  * Calculator
  */
-public class Calculator2 {
+public class CalculatorTest1 {
 
     public static void main(String[] args) {
 

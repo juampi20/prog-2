@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Calculator3 {
+public class CalculatorTest2 {
     public static void main(String[] args) {
         String operator;
         boolean run = true;
