@@ -2,38 +2,38 @@ package calculator;
 
 import java.util.Scanner;
 
-public class Calculator {
+public final class Calculator {
 
-    static Scanner scanner = new Scanner(System.in);
-    static Messages utils = new Messages();
-    
     public static void main(String[] args) {
-        
-        Functions functions = new Functions();
 
-        utils.printMessage("\nInput two numbers:");
+        Scanner scanner = new Scanner(System.in);
+        Functions funcs = new Functions();
+
+        Messages.print(Messages.ADD_NUMBER);
         float firstNumber = scanner.nextFloat();
         float secondNumber = scanner.nextFloat();
 
-        utils.printMessage("\nOperator? (+ - * /)");
+        Messages.print(Messages.CHOOSE_OPTION);
         String operator = scanner.next();
 
         switch (operator) {
         case "+":
-            functions.addition(firstNumber, secondNumber);
+            funcs.addition(firstNumber, secondNumber);
             break;
         case "-":
-            functions.subtraction(firstNumber, secondNumber);
+            funcs.subtraction(firstNumber, secondNumber);
             break;
         case "*":
-            functions.multiplication(firstNumber, secondNumber);
+            funcs.multiplication(firstNumber, secondNumber);
             break;
         case "/":
-            functions.division(firstNumber, secondNumber);
+            funcs.division(firstNumber, secondNumber);
             break;
         default:
-            utils.printMessage("Invalid option: " + operator);
+            Messages.print(Messages.INVALID_OPTION + operator);
         }
+
+        scanner.close();
 
     }
 
