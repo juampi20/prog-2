@@ -6,17 +6,17 @@ public final class Calculator {
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner reader = new Scanner(System.in);
         Functions funcs = new Functions();
 
-        Messages.print(Messages.ADD_NUMBER);
-        float firstNumber = scanner.nextFloat();
-        float secondNumber = scanner.nextFloat();
+        System.out.println(Constants.ADD_NUMBER);
+        float firstNumber = reader.nextFloat();
+        float secondNumber = reader.nextFloat();
 
-        Messages.print(Messages.CHOOSE_OPTION);
-        String operator = scanner.next();
+        System.out.print(Constants.CHOOSE_OPERATOR);
+        String operator = reader.next();
 
-        scanner.close();
+        reader.close();
 
         float result = 0;
         switch (operator) {
@@ -33,11 +33,11 @@ public final class Calculator {
             result = funcs.division(firstNumber, secondNumber);
             break;
         default:
-            Messages.print(Messages.INVALID_OPTION + operator);
+        System.out.println(String.format(Constants.INVALID_OPERATOR, operator));
             return;
         }
 
-        System.out.println("\n" + firstNumber + " " + operator + " " + secondNumber + " = " + result);
+        System.out.println(String.format(Constants.RESULT, firstNumber, operator, secondNumber, result));
 
     }
 
