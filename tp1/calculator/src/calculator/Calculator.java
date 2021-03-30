@@ -16,24 +16,28 @@ public final class Calculator {
         Messages.print(Messages.CHOOSE_OPTION);
         String operator = scanner.next();
 
+        scanner.close();
+
+        float result = 0;
         switch (operator) {
         case "+":
-            funcs.addition(firstNumber, secondNumber);
+            result = funcs.addition(firstNumber, secondNumber);
             break;
         case "-":
-            funcs.subtraction(firstNumber, secondNumber);
+            result = funcs.subtraction(firstNumber, secondNumber);
             break;
         case "*":
-            funcs.multiplication(firstNumber, secondNumber);
+            result = funcs.multiplication(firstNumber, secondNumber);
             break;
         case "/":
-            funcs.division(firstNumber, secondNumber);
+            result = funcs.division(firstNumber, secondNumber);
             break;
         default:
             Messages.print(Messages.INVALID_OPTION + operator);
+            return;
         }
 
-        scanner.close();
+        System.out.println("\n" + firstNumber + " " + operator + " " + secondNumber + " = " + result);
 
     }
 
