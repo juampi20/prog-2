@@ -10,6 +10,10 @@ public final class Messages {
     public static final String RESULT_MULTIPLICATION = "The result of the multiplication is: ";
     public static final String RESULT_DIVISION = "The result of the division is: ";
 
+    private Messages() {
+        throw new AssertionError();
+    }
+
     public static void print(String message) {
         System.out.println("\n" + message);
     }
