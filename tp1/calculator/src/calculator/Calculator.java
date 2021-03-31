@@ -7,7 +7,7 @@ public final class Calculator {
     public static void main(String[] args) {
 
         Scanner reader = new Scanner(System.in);
-        Functions funcs = new Functions();
+        Operations funcs = new Operations();
 
         System.out.println(Constants.ADD_NUMBER);
         float firstNumber = reader.nextFloat();
@@ -33,7 +33,7 @@ public final class Calculator {
             result = funcs.division(firstNumber, secondNumber);
             break;
         default:
-        System.out.println(String.format(Constants.INVALID_OPERATOR, operator));
+            System.out.println(String.format(Constants.INVALID_OPERATOR, operator));
             return;
         }
 

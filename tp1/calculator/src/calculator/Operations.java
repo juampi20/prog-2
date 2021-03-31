@@ -1,6 +1,6 @@
 package calculator;
 
-public class Functions {
+public class Operations {
 
     public float addition(float firstNumber, float secondNumber) {
         float ret = firstNumber + secondNumber;
